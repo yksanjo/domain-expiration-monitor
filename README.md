@@ -1,6 +1,13 @@
-# Domain Expiration Monitor
+# DomainWatch 🌐
 
-Monitor multiple domains and get alerts before they expire. Never lose a domain due to expiration again.
+> **Domain Expiration Monitor** - Monitor multiple domains and get alerts before they expire. Never lose a domain due to expiration again.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/yksanjo/DomainWatch)
+[![GitHub stars](https://img.shields.io/github/stars/yksanjo/DomainWatch?style=social)](https://github.com/yksanjo/DomainWatch)
+
+**DomainWatch** keeps track of all your domains' expiration dates and sends you alerts before they expire. Perfect for agencies, developers, and businesses managing multiple domains.
 
 ## Features
 
