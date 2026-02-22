@@ -1,83 +1,84 @@
-# DomainWatch 🌐
+# domain-expiration-monitor
 
-> **Domain Expiration Monitor** - Monitor multiple domains and get alerts before they expire. Never lose a domain due to expiration again.
+## Detailed Description
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/yksanjo/DomainWatch)
-[![GitHub stars](https://img.shields.io/github/stars/yksanjo/DomainWatch?style=social)](https://github.com/yksanjo/DomainWatch)
+domain-expiration-monitor is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-**DomainWatch** keeps track of all your domains' expiration dates and sends you alerts before they expire. Perfect for agencies, developers, and businesses managing multiple domains.
+## Problem Statement
 
-## Features
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-- 🌐 Multi-domain monitoring
-- ⏰ Expiration date tracking
-- 🔔 Email/Slack notifications
-- 📊 Domain status dashboard
-- 📅 Configurable alert thresholds
-- 🔄 Auto-renewal reminders
+## Solution Overview
 
-## Installation
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
-```bash
-pip install -r requirements.txt
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
 ```
 
-## Configuration
+## Getting Started
 
-Create a `.env` file:
+### Prerequisites
 
-```env
-# Notification Settings
-EMAIL_TO=your-email@example.com
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+- Git
+- Project runtime/toolchain for this repo
 
-# Alert Settings
-ALERT_DAYS_BEFORE=30,14,7,1  # Days before expiration to alert
+### Local Setup
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt  # or: pip install -e .[dev]
+pytest
 ```
 
 ## Usage
 
-### Add Domain
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-python monitor.py --add example.com
-```
+## Quality Standards
 
-### Check All Domains
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-```bash
-python monitor.py --check
-```
+## Security
 
-### List Monitored Domains
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-```bash
-python monitor.py --list
-```
+## Contributing
 
-### Remove Domain
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-```bash
-python monitor.py --remove example.com
-```
+## Roadmap
 
-### Start Continuous Monitoring
+Track upcoming milestones, technical debt, and planned feature work.
 
-```bash
-python monitor.py --watch
-```
+## Support
 
-## Domain Data Sources
-
-The monitor uses WHOIS data to check expiration dates. Supported:
-- All standard TLDs (.com, .org, .net, etc.)
-- Country code TLDs
-- New gTLDs
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT License
-
-
+This project is released under the MIT License.
