@@ -14,7 +14,10 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import requests
 from dotenv import load_dotenv
-import schedule
+try:
+    import schedule
+except ImportError:
+    schedule = None
 
 try:
     import whois
@@ -264,6 +267,8 @@ class DomainExpirationMonitor:
     
     def run_continuous(self, interval: int = 86400):
         """Run continuous monitoring"""
+        if schedule is None:
+            raise RuntimeError("schedule package is required for continuous mode")
         print(f"🚀 Starting continuous domain monitoring (checking every {interval}s)")
         
         schedule.every(interval).seconds.do(self.check_all_domains)
@@ -309,5 +314,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 
